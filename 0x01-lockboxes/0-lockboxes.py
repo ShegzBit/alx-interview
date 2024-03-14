@@ -28,9 +28,7 @@ def canUnlockAll(boxes):
     current_keys = []
     unlocked_boxes = set([0])
     update_current_keys(boxes[0])
-    for i in range(len(boxes)):
-        if len(current_keys) == 0:
-            continue
+    while current_keys:
         key = current_keys.pop(0)
         if key not in unlocked_boxes:
             unlocked_boxes.add(key)
