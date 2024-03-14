@@ -36,7 +36,6 @@ def canUnlockAll(boxes):
             unlocked_boxes.add(key)
             update_current_keys([x for x in boxes[key]
                                 if x not in unlocked_boxes])
-    print(unlocked_boxes)
     if len(unlocked_boxes) == len(boxes):
         return True
     return False
