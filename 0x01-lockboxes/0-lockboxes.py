@@ -25,7 +25,7 @@ def canUnlockAll(boxes):
         current_keys.extend(new_keys)
         current_keys = list(set(current_keys))
 
-    if boxes == []:
+    if len(boxes) <= 0:
         return True
     current_keys = []
     unlocked_boxes = set([0])
